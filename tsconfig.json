@@ -10,7 +10,7 @@
     "paths": {
       "@/*": ["./src/*"]
     },
-    "lib": ["esnext", "dom"],
+    "lib": ["esnext", "dom"]
   },
   "vueCompilerOptions": {
     "target": 3,

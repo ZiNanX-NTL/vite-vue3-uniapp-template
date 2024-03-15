@@ -37,6 +37,7 @@
     "build:quickapp-webview-huawei": "uni build -p quickapp-webview-huawei",
     "build:quickapp-webview-union": "uni build -p quickapp-webview-union",
     "type-check": "vue-tsc --noEmit",
+    "lint": "eslint . --fix",
     "format": "soy prettier-write",
     "commit": "soy git-commit",
     "cleanup": "soy cleanup",
