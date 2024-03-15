@@ -30,17 +30,7 @@ module.exports = {
             position: 'before'
           },
           {
-            pattern: 'vue-router',
-            group: 'external',
-            position: 'before'
-          },
-          {
             pattern: 'pinia',
-            group: 'external',
-            position: 'before'
-          },
-          {
-            pattern: 'naive-ui',
             group: 'external',
             position: 'before'
           },
@@ -70,17 +60,12 @@ module.exports = {
             position: 'before'
           },
           {
-            pattern: '@/views',
+            pattern: '@/pages',
             group: 'internal',
             position: 'before'
           },
           {
             pattern: '@/components',
-            group: 'internal',
-            position: 'before'
-          },
-          {
-            pattern: '@/router',
             group: 'internal',
             position: 'before'
           },
@@ -115,7 +100,7 @@ module.exports = {
             position: 'before'
           },
           {
-            pattern: '@/assets',
+            pattern: '@/static',
             group: 'internal',
             position: 'before'
           },
