@@ -19,3 +19,6 @@ dist
 *.njsproj
 *.sln
 *.sw?
+
+# vscode工作区配置文件
+vite-vue3-uniapp-template.code-workspace
