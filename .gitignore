@@ -22,3 +22,11 @@ dist
 
 # vscode工作区配置文件
 vite-vue3-uniapp-template.code-workspace
+
+# 自动生成声明文件
+/src/typings/components.d.ts
+/src/typings/uni-pages.d.ts
+
+# 自动生成的配置文件
+/src/pages.json
+/src/manifest.json
