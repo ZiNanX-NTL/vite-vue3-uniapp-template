@@ -3,7 +3,11 @@
     <image class="logo" src="/static/logo.png" />
     <view class="text-area">
       <text class="title">{{ title }}</text>
-      <ATest></ATest>
+      <ATest class="mt-10"></ATest>
+      <icon-local-logo />
+      <icon-ant-design-setting-outlined class="mr-4px text-16px" />
+      <icon-line-md-menu-fold-left class="text-20px" />
+      <SvgIcon local-icon="logo" class="text-30px"></SvgIcon>
     </view>
   </view>
 </template>
