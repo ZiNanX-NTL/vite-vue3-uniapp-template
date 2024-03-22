@@ -1,7 +1,7 @@
-<route lang="json5">
+<route lang="jsonc">
 {
-  layout: 'demo',
-  style: { navigationBarTitleText: 'pinia+持久化' },
+  "layout": "demo",
+  "style": { "navigationBarTitleText": "pinia+持久化" }
 }
 </route>
 
@@ -13,28 +13,28 @@
     <button class="ml-2 mr-2" @click="countStore.reset">重置</button>
   </view>
   <view class="m-8 text-4 leading-8">
-    <view class="text-center">{{ userStore.userInfo }}</view>
-    <view class="text-center">请观察小程序的store，可以看到是可以正常设置的</view>
+    <!-- <view class="text-center">{{ userStore.userInfo }}</view> -->
+    <!-- <view class="text-center">请观察小程序的store，可以看到是可以正常设置的</view>
     <button @click="setUserInfo">设置UserInfo</button>
-    <button @click="clearUserInfo" class="mt-4">清除UserInfo</button>
-    <button @click="resetUserStore" class="mt-4">reset UserStore</button>
+    <button class="mt-4" @click="clearUserInfo">清除UserInfo</button>
+    <button class="mt-4" @click="resetUserStore">reset UserStore</button> -->
   </view>
 </template>
 
 <script lang="ts" setup>
-import { useCountStore, useUserStore } from '@/store'
+import { useCountStore } from '@/store';
 
-const countStore = useCountStore()
+const countStore = useCountStore();
 
-const userStore = useUserStore()
+// const userStore = useUserStore();
 
-const setUserInfo = () => {
-  userStore.setUserInfo({ nickname: '菲鸽', avatar: '', token: 'abcdef' })
-}
-const clearUserInfo = () => {
-  userStore.clearUserInfo()
-}
-const resetUserStore = () => {
-  userStore.reset()
-}
+// const setUserInfo = () => {
+//   userStore.setUserInfo({ nickname: '菲鸽', avatar: '', token: 'abcdef' });
+// };
+// const clearUserInfo = () => {
+//   userStore.clearUserInfo();
+// };
+// const resetUserStore = () => {
+//   userStore.reset();
+// };
 </script>
