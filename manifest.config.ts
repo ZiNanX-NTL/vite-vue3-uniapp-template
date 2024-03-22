@@ -6,7 +6,7 @@ import { getEnvPath } from './build';
 // 获取环境变量的范例
 const envPath = getEnvPath();
 const viteEnv = loadEnv(process.env.NODE_ENV!, envPath) as unknown as ImportMetaEnv;
-const { VITE_APP_TITLE, VITE_UNI_APPID, VITE_WX_APPID, VITE_APP_PUBLIC_BASE } = viteEnv;
+const { VITE_APP_TITLE, VITE_UNI_APPID, VITE_WX_APPID, VITE_BASE_URL } = viteEnv;
 
 export default defineManifestConfig({
   name: VITE_APP_TITLE,
@@ -17,7 +17,7 @@ export default defineManifestConfig({
   transformPx: false,
   h5: {
     router: {
-      base: VITE_APP_PUBLIC_BASE
+      base: VITE_BASE_URL
     }
   },
   /* 5+App特有相关 */

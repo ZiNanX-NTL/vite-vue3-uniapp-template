@@ -8,11 +8,30 @@ export default defineConfig(configEnv => {
   const envPath = getEnvPath();
 
   const viteEnv = loadEnv(configEnv.mode, envPath) as unknown as ImportMetaEnv;
-  console.log(viteEnv, rootPath, srcPath);
-  console.log(process.env.UNI_PLATFORM); // 得到 mp-weixin, h5 等
 
   return {
+    base: viteEnv.VITE_BASE_URL,
     envDir: './env',
-    plugins: setupVitePlugins(viteEnv)
+    plugins: setupVitePlugins(viteEnv),
+    resolve: {
+      alias: {
+        '~': rootPath,
+        '@': srcPath
+      }
+    },
+    server: {
+      host: '0.0.0.0',
+      port: 4200
+    },
+    build: {
+      target: 'es2015',
+      minify: 'terser',
+      terserOptions: {
+        compress: {
+          drop_console: viteEnv.VITE_DELETE_CONSOLE === 'true',
+          drop_debugger: viteEnv.VITE_DELETE_CONSOLE === 'true'
+        }
+      }
+    }
   };
 });
